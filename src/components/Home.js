@@ -12,17 +12,36 @@ const Home = (props) => {
     props.requestCars()
   }, [])
   const render_list = ()=>{
-    console.log({props})
-
-    return props.cars.map(car => {
+    console.log({props});
+    const heading = (
+        <div className="row mb-4 centered"  style={{color:"#697C90"}}>
+          <div className="col-md-3">
+            
+          </div>
+          <div className="col-md-3 centered">
+            Car Details
+          </div>
+          <div className="col-md-3 centered">
+            RENT PER DAY
+          </div>
+          <div className="col-md-3">
+  
+          </div>
+      </div>)
+    return (
+      <>
+      {heading}
+      {props.cars.map(car => {
       return <CarListItem car={car} />
-    });
+    })}
+    </>
+    )
   }
   return (
     <>
       <Header />
       <div className="container">
-        <h2>Cars for rent</h2>
+        <h2 className="mb-4">Cars for rent</h2>
         <div className="container">
           {render_list()}
         </div>

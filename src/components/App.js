@@ -16,7 +16,7 @@ const Routing = ()=>{
     const user = localStorage.getItem('user');
     const token = localStorage.getItem('token');
     if(user && token){
-      history.push('/');
+      // history.push('/');
     }
     else{
       history.push('/signin');
@@ -34,10 +34,10 @@ const Routing = ()=>{
       <Route path='/signup'>
         <Signup/>
       </Route>
-      <Route path='/:carmodel'>
+      <Route exact path='/:carmodel'>
         <CarDetails/>
       </Route>
-      <Route path='/:carmodel/book'>
+      <Route exact path='/:carmodel/book'>
         <CarBook/>
       </Route>
       <Route path='/error'>

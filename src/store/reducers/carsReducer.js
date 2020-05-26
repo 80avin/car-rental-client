@@ -1,13 +1,14 @@
-import {ADD_CARS} from '../actions/carsAction';
+import {SET_CARS, REMOVE_CARS} from '../actions/carsAction';
 
 const initialState = []
 
 export default (state = initialState, { type, payload }) => {
   switch (type) {
 
-  case ADD_CARS:
-    return [ ...state, ...payload ]
-
+  case SET_CARS:
+    return [...payload ];
+  case REMOVE_CARS:
+    return initialState;
   default:
     return state
   }

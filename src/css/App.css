@@ -4,6 +4,11 @@ body,#root {
   width: 100%;
 }
 
+.footer{
+  margin-top: 5rem;
+  bottom: 0px;
+}
+
 body {
   display: -ms-flexbox;
   display: -webkit-box;
@@ -49,4 +54,28 @@ body {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.centered{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide{
+  display:none;
+}
+
+.block-everything{
+  position: absolute;
+  top:0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 100vh;
+  width: 100vw;
+  background-color: gray;
 }

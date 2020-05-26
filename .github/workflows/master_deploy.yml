@@ -23,5 +23,6 @@ jobs:
         npm run deploy
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLIC_URL: 'https://80avin.github.io/car-rental-client/'
     - name: Updating Domain
       run: echo "Update domain ${{ secrets.GITHUB_TOKEN }}"

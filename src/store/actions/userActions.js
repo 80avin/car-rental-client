@@ -21,7 +21,7 @@ export const signinRequest = (phone, password) => dispatch => {
 }
 
 export const signin = (user, token) => {
-  localStorage.setItem('user', JSON.stringify('user'));
+  localStorage.setItem('user', JSON.stringify(user));
   localStorage.setItem('token', token);
   return {
     type: SIGNIN_SUCCESS,
